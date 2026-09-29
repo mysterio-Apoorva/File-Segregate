@@ -1,0 +1,58 @@
+{
+  "name": "studysort-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:live": "vitest run tests/live.test.ts",
+    "test:browser": "playwright test",
+    "db:migrate": "tsx --env-file=.env.local scripts/migrate.ts",
+    "storage:setup": "tsx --env-file=.env.local scripts/storage.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "latest",
+    "@aws-sdk/lib-storage": "latest",
+    "@aws-sdk/s3-request-presigner": "latest",
+    "@google/genai": "latest",
+    "archiver": "^7.0.1",
+    "cfb": "^1.2.2",
+    "fast-xml-parser": "latest",
+    "inngest": "^3.44.0",
+    "lucide-react": "latest",
+    "next": "^16.2.0",
+    "pdfjs-dist": "^6.2.108",
+    "pdf-lib": "^1.17.1",
+    "postgres": "^3.4.7",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "^0.0.1",
+    "word-extractor": "^1.0.4",
+    "yauzl": "^3.2.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "@types/archiver": "^6.0.3",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/word-extractor": "latest",
+    "@types/yauzl": "^2.10.3",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "^16.2.0",
+    "node": "^22.22.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
